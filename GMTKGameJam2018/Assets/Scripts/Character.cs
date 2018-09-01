@@ -1,6 +1,4 @@
 ﻿using Assets.Scripts;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Character : Interactive
@@ -23,11 +21,22 @@ public class Character : Interactive
 	
     public void OnLaunch()
     {
+        animator.SetTrigger("Launch");
         if (state == CharacterState.Idle)
         {
-            animator.SetTrigger("Launch");
             state = CharacterState.Launching;
         }
+        else
+        {
+            SetAdrift();
+        }
+    }
+
+    private void SetAdrift()
+    {
+        state = CharacterState.Drifting;
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.angularVelocity = -Random.Range(30, 300);
     }
 
     public void OnLand()
@@ -36,7 +45,7 @@ public class Character : Interactive
         state = CharacterState.Landing;
         transform.rotation = Quaternion.identity;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        Instantiate(smoke, new Vector3(transform.position.x, transform.position.y - .05f, transform.position.z - 1), Quaternion.Euler(0, 0, 0), transform);
+        Instantiate(smoke, new Vector3(transform.position.x, transform.position.y - .05f, transform.position.z - 1), Quaternion.Euler(0, 0, 0));
     }
 
 	// Update is called once per frame
@@ -53,9 +62,7 @@ public class Character : Interactive
         {
             if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Launch"))
             {
-                state = CharacterState.Drifting;
-                rb.constraints = RigidbodyConstraints2D.None;
-                rb.angularVelocity = -Random.Range(30, 300);
+                SetAdrift();
             }
         }
 
@@ -64,6 +71,10 @@ public class Character : Interactive
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("CharacterIdle"))
             {
                 state = CharacterState.Idle;
+            }
+            else if(animator.GetCurrentAnimatorStateInfo(0).IsName("Dummy"))
+            {
+                animator.SetTrigger("Land"); //Sometimes it needs a little extra nudge to get into the right animation
             }
         }
     }

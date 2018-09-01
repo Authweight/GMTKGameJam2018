@@ -9,6 +9,33 @@ namespace Assets.Scripts
 {
     public class Parachute : MonoBehaviour
     {
+        private Rigidbody2D rb;
+        private enum ParachuteState
+        {
+            Dropping,
+            FloatingAway
+        }
 
+        private ParachuteState state;
+
+        private void Start()
+        {
+            rb = GetComponent<Rigidbody2D>();
+            state = ParachuteState.Dropping;
+        }
+
+        private void FixedUpdate()
+        {
+            if (state == ParachuteState.Dropping)
+                rb.velocity = new Vector2(0, .5f);
+            if (state == ParachuteState.FloatingAway)
+                rb.velocity = new Vector2(0, 3f);
+        }
+
+        public void CutLoose()
+        {
+            Debug.Log("Cut loose");
+            state = ParachuteState.FloatingAway;
+        }
     }
 }

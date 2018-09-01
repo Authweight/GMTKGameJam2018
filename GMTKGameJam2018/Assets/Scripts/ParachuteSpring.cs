@@ -6,12 +6,14 @@ using UnityEngine;
 public class ParachuteSpring : Interactive
 {
     private SpringManager springManager;
+    public Parachute parachutePrefab;
 
     public Transform spawn;
 
-    private float slowDrop = .1f;
-
     private float deployHeight = 5.0f;
+    private const float VeryLarge = 1000000000f;
+    private HingeJoint2D joint;
+    private Parachute myParachute;
 
     protected override bool MoveWithConveyor => false;
 
@@ -29,23 +31,37 @@ public class ParachuteSpring : Interactive
         if (springManager.Destroy())
             Destroy(gameObject);
         springManager.HandleDrop(transform, spawn, IsGrounded);
-        if (springManager.IsDropping())
-        {
-            var shouldDeploy = CheckForDeploy();
-            if (shouldDeploy)
-            {
-                springManager.Deploy();
-            }
-        }
     }
 
     private void FixedUpdate()
     {
         OnFixedUpdate();
         rb.velocity = springManager.GetVelocity(rb.velocity);
-        if (springManager.IsDeploying())
+
+        if (springManager.IsDropping())
         {
-            rb.velocity = new Vector2(0, -slowDrop);
+            var shouldDeploy = CheckForDeploy();
+            if (shouldDeploy)
+            {
+                rb.velocity = Vector2.zero;
+                myParachute = Instantiate(parachutePrefab, transform.position, Quaternion.identity);
+                myParachute.transform.position = transform.position + Vector3.up * 1f;
+                joint = gameObject.AddComponent<HingeJoint2D>();
+                joint.connectedBody = myParachute.GetComponent<Rigidbody2D>();
+                joint.anchor = new Vector2(0, .59f);
+                joint.connectedAnchor = new Vector2(0.05f, -0.6f);
+                joint.limits = new JointAngleLimits2D { max = 359, min = 0 };
+                joint.breakForce = VeryLarge;
+                joint.breakTorque = VeryLarge;
+                joint.autoConfigureConnectedAnchor = true;
+                springManager.Deploy(rb);
+            }
+        }
+
+        if (springManager.IsFinished() && joint != null)
+        {
+            Destroy(joint);
+            myParachute.CutLoose();
         }
     }
 

@@ -38,9 +38,9 @@ namespace Assets.Scripts
             return deployState == DeployState.Dropping;
         }
 
-        internal void Deploy()
+        internal void Deploy(Rigidbody2D spring)
         {
-            deployState = DeployState.Deploying;
+            deployState = DeployState.Deploying;            
         }
 
         internal bool IsDeploying()
@@ -63,11 +63,17 @@ namespace Assets.Scripts
             if (extended)
                 return;
 
+            extended = true;
             other.SpringLaunch();
             deployState = DeployState.Finished;
             deathTime = TimeKeeper.GetTime() + deathDelay;
             rb.velocity = new Vector2(extensionForceX, extensionForceY);
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * 2, transform.localScale.z);
+        }
+
+        internal bool IsFinished()
+        {
+            return deployState == DeployState.Finished;
         }
 
         public bool Destroy()
