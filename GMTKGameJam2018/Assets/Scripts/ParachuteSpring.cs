@@ -28,7 +28,7 @@ public class ParachuteSpring : Interactive
         OnUpdate();
         if (springManager.Destroy())
             Destroy(gameObject);
-        springManager.HandleDrop(transform, spawn, isGrounded);
+        springManager.HandleDrop(transform, spawn, IsGrounded);
         if (springManager.IsDropping())
         {
             var shouldDeploy = CheckForDeploy();

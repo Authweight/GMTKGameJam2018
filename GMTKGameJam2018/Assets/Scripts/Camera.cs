@@ -23,6 +23,6 @@ public class Camera : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(ConveyorSpeed.GetSpeed(), transform.position.y);
+        rb.velocity = new Vector2(ConveyorSpeed.GetSpeed() * 0.9f, transform.position.y);
 	}
 }

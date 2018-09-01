@@ -9,14 +9,18 @@ namespace Assets.Scripts
     public abstract class Interactive : MonoBehaviour
     {
         public float GroundDistance;
-        protected bool isGrounded;
-        protected virtual bool MoveWithConveyor => isGrounded;
+        protected bool IsGrounded => CalculateGrounded();
+        protected virtual bool MoveWithConveyor => IsGrounded;
         protected virtual float LaunchX => 4f;
         protected virtual float LaunchY => 30f;
         protected Rigidbody2D rb;
         private float lastLaunch = 0;
         private float launchDelay = .3f;
         private bool isLaunching = false;
+        private bool hasLaunched = false;
+
+        public Action onLaunch = () => { };
+        public Action onLand = () => { };
 
         public void OnStart()
         {
@@ -24,20 +28,24 @@ namespace Assets.Scripts
         }
 
         public void OnUpdate()
-        {
-            isGrounded = IsGrounded();
-
+        {                        
             if (TimeKeeper.GetTime() - lastLaunch > launchDelay)
                 isLaunching = false;
         }
 
-        public bool IsGrounded()
+        public bool CalculateGrounded()
         {
             return Physics2D.Raycast(transform.position, Vector2.down, GroundDistance, LayerMask.GetMask("Conveyor"));
         }
 
         public void OnFixedUpdate()
         {
+            if (!isLaunching && hasLaunched && IsGrounded)
+            {
+                onLand();
+                hasLaunched = false;
+            }
+
             MoveAlongConveyor();
         }
 
@@ -53,7 +61,9 @@ namespace Assets.Scripts
             {
                 lastLaunch = TimeKeeper.GetTime();
                 isLaunching = true;
+                hasLaunched = true;
                 rb.velocity = new Vector2(LaunchX + rb.velocity.x, LaunchY);
+                onLaunch();
             }
         }
     }

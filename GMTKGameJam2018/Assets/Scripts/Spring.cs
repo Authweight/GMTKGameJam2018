@@ -27,7 +27,7 @@ public class Spring : Interactive
             Destroy(gameObject);
         };
 
-        springManager.HandleDrop(transform, spawn, isGrounded);
+        springManager.HandleDrop(transform, spawn, IsGrounded);
 	}
 
     private void FixedUpdate()

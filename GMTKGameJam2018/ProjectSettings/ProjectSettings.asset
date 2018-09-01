@@ -620,7 +620,7 @@ PlayerSettings:
     Hub: 0
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 9cfbbc23-8cee-4c6b-8cf2-517919648822
   projectName: GMTKGameJam2018
   organizationId: tom-goldthwait
