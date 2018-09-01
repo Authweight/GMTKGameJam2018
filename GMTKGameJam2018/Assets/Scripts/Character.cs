@@ -111,9 +111,8 @@ public class Character : Interactive
         if (collision.gameObject.CompareTag("Bumper"))
         {
             Debug.Log("Bumping");
-            var vector = (transform.position - collision.transform.position).normalized * 70;
-            Debug.Log($"X: {vector.x}, Y: {vector.y}");
-            SpringLaunch(vector.x, vector.y);
+            var vector = (transform.position - collision.transform.position).normalized * 50;
+            SpringLaunch(vector.x + rb.velocity.x, vector.y + 15.0f);
         }
     }
 
