@@ -10,6 +10,7 @@ namespace Assets.Scripts
     public class SpringManager
     {
         private DeployState deployState = DeployState.Dropping;
+        private bool extended = false;
         
         private float extensionForceX = 1f;
         private float extensionForceY = 5f;
@@ -57,11 +58,16 @@ namespace Assets.Scripts
             return velocity;
         }
 
-        internal Vector2 Extend(Vector2 velocity)
+        internal void Extend(Interactive other, Rigidbody2D rb, Transform transform)
         {
+            if (extended)
+                return;
+
+            other.SpringLaunch();
             deployState = DeployState.Finished;
             deathTime = TimeKeeper.GetTime() + deathDelay;
-            return new Vector2(extensionForceX, extensionForceY);
+            rb.velocity = new Vector2(extensionForceX, extensionForceY);
+            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * 2, transform.localScale.z);
         }
 
         public bool Destroy()

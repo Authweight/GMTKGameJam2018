@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: 55d05091bbd33ad4b9fac980d10b1511
+guid: 7aa69c0593c5105419a56241e40fca3e
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Hero-Sprite-Sheet-Jump_0
-    21300002: Hero-Sprite-Sheet-Jump_1
-    21300004: Hero-Sprite-Sheet-Jump_2
-    21300006: Hero-Sprite-Sheet-Jump_3
+    21300000: Balloon_0
+    21300002: Balloon_1
+    21300004: Balloon_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -121,13 +120,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hero-Sprite-Sheet-Jump_0
+      name: Balloon_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 100
-        height: 200
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,19 +134,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba4462dad23ade74f84d0d5809e79969
+      spriteID: e44d8df34a8f0eb49884e21e008aa1df
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hero-Sprite-Sheet-Jump_1
+      name: Balloon_1
       rect:
         serializedVersion: 2
         x: 100
         y: 0
         width: 100
-        height: 200
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,19 +154,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d93290e3fa736b46a22992c1cbfad12
+      spriteID: 35034d79fd442dc4581220ae07cbd7a2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hero-Sprite-Sheet-Jump_2
+      name: Balloon_2
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 100
-        height: 200
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,27 +174,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db54201263474b548b2fcb9d75ec9173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero-Sprite-Sheet-Jump_3
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 0
-        width: 100
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0d8731e1b148b849894961de5528e18
+      spriteID: 0ac2c4465bda8ba41ab26c0aa2add880
       vertices: []
       indices: 
       edges: []
@@ -203,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 41b914c95576ce34ea2349d79778761a
+    spriteID: 06a4d79eea39bbe449a4f4aebb0da64d
     vertices: []
     indices: 
     edges: []

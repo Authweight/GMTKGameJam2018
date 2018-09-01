@@ -42,8 +42,7 @@ public class Spring : Interactive
         var interactive = collision.gameObject.GetComponent<Interactive>();
         if (interactive != null)
         {
-            interactive.SpringLaunch();
-            rb.velocity = springManager.Extend(rb.velocity);
+            springManager.Extend(interactive, rb, transform);
         }
     }
 }
