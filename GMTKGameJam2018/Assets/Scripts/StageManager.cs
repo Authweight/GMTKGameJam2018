@@ -7,8 +7,14 @@ using UnityEngine.UI;
 public class StageManager : MonoBehaviour
 {
     private Scene scene;
-    private int score;
+    private int score = 0;
     public Text scoreText;
+    public Image deathOverlay;
+    public Text finalScore;
+    public Spawn spawn;
+    private bool gameOver = false;
+
+    private readonly byte deathOverlayOpacity = 130;
 
 	// Use this for initialization
 	void Start ()
@@ -27,7 +33,19 @@ public class StageManager : MonoBehaviour
 
     public void AddScore(int amount)
     {
-        score += amount;
-        scoreText.text = $"Score: {score}";
+        if (!gameOver)
+        {
+            score += amount;
+            scoreText.text = $"Score: {score}";
+            finalScore.text = $"Final Score \n {score}";
+        }
+    }
+
+    public void Death()
+    {
+        deathOverlay.color = new Color32(0, 0, 0, deathOverlayOpacity);
+        finalScore.color = new Color(finalScore.color.r, finalScore.color.g, finalScore.color.b, 255);
+        gameOver = true;
+        spawn.GameOver();
     }
 }

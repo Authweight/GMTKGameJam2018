@@ -55,14 +55,14 @@ namespace Assets.Scripts
                 rb.velocity = new Vector2(ConveyorSpeed.GetSpeed(), rb.velocity.y);
         }
 
-        public virtual void SpringLaunch()
+        public virtual void SpringLaunch(float? x = null, float? y= null)
         {
             if (!isLaunching)
             {
                 lastLaunch = TimeKeeper.GetTime();
                 isLaunching = true;
                 hasLaunched = true;
-                rb.velocity = new Vector2(LaunchX + rb.velocity.x, LaunchY);
+                rb.velocity = new Vector2(x ?? LaunchX + rb.velocity.x, y ?? LaunchY);
                 onLaunch();
             }
         }

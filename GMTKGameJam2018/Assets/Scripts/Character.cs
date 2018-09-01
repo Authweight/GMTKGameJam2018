@@ -99,6 +99,22 @@ public class Character : Interactive
             scoreMultiplier += .2f;
             multiplier.text = $"x{scoreMultiplier:f1}";
         }
+
+        if (collider.gameObject.CompareTag("Hazard"))
+        {
+            stageManager.Death();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bumper"))
+        {
+            Debug.Log("Bumping");
+            var vector = (transform.position - collision.transform.position).normalized * 70;
+            Debug.Log($"X: {vector.x}, Y: {vector.y}");
+            SpringLaunch(vector.x, vector.y);
+        }
     }
 
     private enum CharacterState

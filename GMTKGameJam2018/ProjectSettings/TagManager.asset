@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Character
   - Ground
+  - Hazard
+  - Bumper
   layers:
   - Default
   - TransparentFX
