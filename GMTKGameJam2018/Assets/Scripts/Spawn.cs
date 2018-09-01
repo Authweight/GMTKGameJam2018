@@ -7,7 +7,6 @@ public class Spawn : MonoBehaviour {
 
     public Rigidbody2D spring;
     private Transform spawnTransform;
-    private float launchSpeed = 3;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +22,5 @@ public class Spawn : MonoBehaviour {
 
     private void SpawnSpring() { 
         var newSpring = Instantiate(spring, spawnTransform.position, spawnTransform.rotation);
-        newSpring.velocity = new Vector2(CharacterSpeed.GetSpeed() * .75f, -launchSpeed);
     }
 }
