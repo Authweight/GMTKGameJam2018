@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour {
 
-    public Rigidbody2D spring;
+    public Bouncer spring;
     private Transform spawnTransform;
+
+    public Queue<Bouncer> bouncers = new Queue<Bouncer>();
+
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +17,8 @@ public class Spawn : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         var input = Input.GetButtonDown("Fire1");
         if (input)
             SpawnSpring();
@@ -22,5 +26,7 @@ public class Spawn : MonoBehaviour {
 
     private void SpawnSpring() { 
         var newSpring = Instantiate(spring, spawnTransform.position, spawnTransform.rotation);
+        newSpring.spawn = transform;
+        bouncers.Enqueue(newSpring);
     }
 }

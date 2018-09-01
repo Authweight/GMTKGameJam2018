@@ -7,6 +7,7 @@ using UnityEngine;
 public class Bouncer : Interactive
 {
     private DeployState deployState = DeployState.Dropping;
+    public Transform spawn;
 
     private float extensionForceX = 1f;
     private float extensionForceY = 3;
@@ -19,18 +20,16 @@ public class Bouncer : Interactive
 
     private float deployHeight = 3.8f;
 
-    protected override bool MoveWithConveyor => 
-        deployState == DeployState.Dropping  
-        ? true 
-        : deployState == DeployState.Deploying 
-            ? false 
-            : isGrounded;
+    private float defaultGravity;
+
+    protected override bool MoveWithConveyor => deployState == DeployState.Finished ? true : false;
 
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         OnStart();
+        defaultGravity = rb.gravityScale;
 	}
 	
 	// Update is called once per frame
@@ -42,10 +41,12 @@ public class Bouncer : Interactive
 
         if (deployState == DeployState.Dropping)
         {
+            transform.position = new Vector3(spawn.position.x, transform.position.y, transform.position.z);
             var shouldDeploy = CheckForDeploy();
             if (shouldDeploy)
             {
                 deployState = DeployState.Deploying;
+                //rb.gravityScale = 0;
             }
         }
         if (deployState == DeployState.Deploying)
@@ -53,7 +54,7 @@ public class Bouncer : Interactive
             if (isGrounded)
             {
                 deployState = DeployState.Finished;
-                rb.constraints = RigidbodyConstraints2D.None;
+                rb.gravityScale = defaultGravity;
             }
         }
 	}
@@ -83,12 +84,18 @@ public class Bouncer : Interactive
 
     public bool CheckForDeploy()
     {
-        return Physics2D.Raycast(transform.position, Vector2.down, deployHeight, LayerMask.GetMask("Conveyor"));
+        return RaycastCheck(0f) || RaycastCheck(-.5f) || RaycastCheck(.5f);
+    }
+
+    public bool RaycastCheck(float offset)
+    {
+        return Physics2D.Raycast(new Vector2(transform.position.x + offset, transform.position.y), Vector2.down, deployHeight, LayerMask.GetMask("Conveyor"));
     }
 
     private void Extend()
     {
         deployState = DeployState.Finished;
+        rb.gravityScale = defaultGravity;
         deathTime = TimeKeeper.GetTime() + deathDelay;
         rb.velocity = new Vector2(extensionForceX, extensionForceY);
     }
@@ -98,5 +105,15 @@ public class Bouncer : Interactive
         Dropping,
         Deploying,
         Finished
+    }
+
+    public void Drop()
+    {
+        deployState = DeployState.Finished;
+    }
+
+    public bool IsDroppable()
+    {
+        return gameObject.activeInHierarchy && !(deployState == DeployState.Finished);
     }
 }
