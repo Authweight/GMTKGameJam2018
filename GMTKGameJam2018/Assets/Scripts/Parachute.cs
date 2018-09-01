@@ -34,7 +34,6 @@ namespace Assets.Scripts
 
         public void CutLoose()
         {
-            Debug.Log("Cut loose");
             state = ParachuteState.FloatingAway;
         }
     }

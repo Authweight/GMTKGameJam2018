@@ -22,7 +22,7 @@ namespace Assets.Scripts
 
         internal void HandleDrop(Transform transform, Transform spawn, bool isGrounded)
         {
-            if (deployState == DeployState.Dropping)
+            if (deployState == DeployState.Dropping && spawn != null)
             {
                 transform.position = new Vector3(spawn.position.x, transform.position.y, transform.position.z);
             }

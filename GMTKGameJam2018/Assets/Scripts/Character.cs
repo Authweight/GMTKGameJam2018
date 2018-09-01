@@ -1,11 +1,16 @@
 ﻿using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Character : Interactive
 {
     Animator animator;
     public Smoke smoke;
+    public StageManager stageManager;
     private CharacterState state = CharacterState.Idle;
+    private float scoreMultiplier = 1;
+    public Text multiplier;
+    private float multiplierEnd;
 
     protected override bool MoveWithConveyor => IsGrounded;
 
@@ -46,12 +51,18 @@ public class Character : Interactive
         transform.rotation = Quaternion.identity;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         Instantiate(smoke, new Vector3(transform.position.x, transform.position.y - .05f, transform.position.z - 1), Quaternion.Euler(0, 0, 0));
+        multiplierEnd = TimeKeeper.GetTime() + 1.5f;
     }
 
 	// Update is called once per frame
 	void Update ()
     {
         OnUpdate();
+        if (state == CharacterState.Idle && TimeKeeper.GetTime() > multiplierEnd)
+        {
+            scoreMultiplier = 1;
+            multiplier.text = "";
+        }
     }
 
     void FixedUpdate()
@@ -76,6 +87,17 @@ public class Character : Interactive
             {
                 animator.SetTrigger("Land"); //Sometimes it needs a little extra nudge to get into the right animation
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        var collectible = collider.gameObject.GetComponent<Collectible>();
+        if (collectible != null)
+        {
+            stageManager.AddScore(Mathf.RoundToInt(collectible.Collect() * scoreMultiplier));
+            scoreMultiplier += .2f;
+            multiplier.text = $"x{scoreMultiplier:f1}";
         }
     }
 
