@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour {
 
-    public Bouncer spring;
+    public Spring spring;
+    public ParachuteSpring parachute;
     private Transform spawnTransform;
-
-    public Queue<Bouncer> bouncers = new Queue<Bouncer>();
 
 
 	// Use this for initialization
@@ -19,14 +18,24 @@ public class Spawn : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        var input = Input.GetButtonDown("Fire1");
-        if (input)
+        var spring = Input.GetButtonDown("Fire1");
+        if (spring)
             SpawnSpring();
+        var parachute = Input.GetButtonDown("Fire2");
+        if (parachute)
+            SpawnParachute();
+
 	}
 
-    private void SpawnSpring() { 
+    private void SpawnParachute()
+    {
+        var newParachute = Instantiate(parachute, spawnTransform.position, spawnTransform.rotation);
+        newParachute.spawn = transform;
+    }
+
+    private void SpawnSpring()
+    { 
         var newSpring = Instantiate(spring, spawnTransform.position, spawnTransform.rotation);
         newSpring.spawn = transform;
-        bouncers.Enqueue(newSpring);
     }
 }
