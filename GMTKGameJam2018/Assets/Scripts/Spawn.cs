@@ -45,6 +45,7 @@ public class Spawn : MonoBehaviour {
     private void SpawnParachute()
     {
         animator.SetTrigger("Spawn");
+        SoundEvents.Play("ItemDrop");
         var newParachute = Instantiate(parachute, GetSpawnPosition(), spawnTransform.rotation);
         newParachute.spawn = transform;
     }
@@ -65,6 +66,7 @@ public class Spawn : MonoBehaviour {
         if (potatoesLeft > 0 && TimeKeeper.GetTime() > nextPotato)
         {
             animator.SetTrigger("Spawn");
+            SoundEvents.Play("ItemDrop");
             var newPotato = Instantiate(potatoes[3-potatoesLeft], GetSpawnPosition(), spawnTransform.rotation);
             newPotato.velocity = new Vector2(ConveyorSpeed.GetSpeed(), 0);
             newPotato.angularVelocity = UnityEngine.Random.Range(40, 180);
@@ -76,6 +78,7 @@ public class Spawn : MonoBehaviour {
     private void SpawnSpring()
     {
         animator.SetTrigger("Spawn");
+        SoundEvents.Play("ItemDrop");
         var newSpring = Instantiate(spring, GetSpawnPosition(), spawnTransform.rotation);
         newSpring.spawn = transform;
     }

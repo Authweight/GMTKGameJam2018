@@ -64,7 +64,7 @@ namespace Assets.Scripts
                 return;
 
             extended = true;
-            other.SpringLaunch();
+            other.SpringLaunch(isSpring: true);
             deployState = DeployState.Finished;
             deathTime = TimeKeeper.GetTime() + deathDelay;
             rb.velocity = new Vector2(extensionForceX, extensionForceY);

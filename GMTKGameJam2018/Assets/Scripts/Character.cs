@@ -113,6 +113,7 @@ public class Character : Interactive
 
         if (collider.gameObject.CompareTag("Hazard"))
         {
+            SoundEvents.Play("Death");
             stageManager.Death();
         }
     }
@@ -121,6 +122,7 @@ public class Character : Interactive
     {
         if (collision.gameObject.CompareTag("Bumper"))
         {
+            SoundEvents.Play("Bumper");
             var vector = (transform.position - collision.transform.position).normalized;
             var launchVector = NearestVector(vector) * 20.0f;
             SpringLaunch(launchVector.x, launchVector.y);
@@ -128,6 +130,7 @@ public class Character : Interactive
 
         if (collision.gameObject.CompareTag("Hazard"))
         {
+            SoundEvents.Play("Death");
             stageManager.Death();
         }
     }
