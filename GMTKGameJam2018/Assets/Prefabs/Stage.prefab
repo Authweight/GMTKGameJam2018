@@ -1577,7 +1577,7 @@ MonoBehaviour:
   - {fileID: 4549909245389978, guid: 160d660f2870ad545ac50d2aa90072c2, type: 2}
   - {fileID: 4634162661124200, guid: be489a9594c33fb41a31cd8aed9a7960, type: 2}
   - {fileID: 4379664409302276, guid: bb013c047a80b5e4084c466581eb06c3, type: 2}
-  - {fileID: 4693041273576470, guid: 27aa22dca33e8e14db5e507d95a2a94a, type: 2}
+  - {fileID: 0}
   - {fileID: 4799648982471492, guid: 71944f944df192b49a1f0d504ada95ff, type: 2}
   - {fileID: 4491919229198938, guid: fdac6b36982904d47b9012e7557c30cf, type: 2}
   cameraController: {fileID: 114282719033623382}

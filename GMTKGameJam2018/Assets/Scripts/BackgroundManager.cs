@@ -23,8 +23,8 @@ public class BackgroundManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        activeFarBackgrounds = Create(farBackground, farParallax);
-        activeMidBackgrounds = Create(midBackground, midParallax);
+        activeFarBackgrounds = Create(farBackground, farParallax, 50);
+        activeMidBackgrounds = Create(midBackground, midParallax, 40);
         activeNearBackgrounds = new List<ParallaxObject>();
     }
 
@@ -61,13 +61,13 @@ public class BackgroundManager : MonoBehaviour
         activeNearBackgrounds.ForEach(x => x.UpdatePosition());
     }
 
-    private List<ParallaxObject> Create(Transform background, float parallax)
+    private List<ParallaxObject> Create(Transform background, float parallax, float plane)
     {
-        var middle = Instantiate(background, new Vector3(cameraTransform.position.x, cameraTransform.position.y, 50), Quaternion.identity);
-        var left = Instantiate(background, new Vector3(cameraTransform.position.x - tileWidth, cameraTransform.position.y, 50), Quaternion.identity);
-        var farLeft = Instantiate(background, new Vector3(cameraTransform.position.x - tileWidth * 2, cameraTransform.position.y, 50), Quaternion.identity);
-        var right = Instantiate(background, new Vector3(cameraTransform.position.x + tileWidth, cameraTransform.position.y, 50), Quaternion.identity);
-        var farRight = Instantiate(background, new Vector3(cameraTransform.position.x + tileWidth * 2, cameraTransform.position.y, 50), Quaternion.identity);
+        var middle = Instantiate(background, new Vector3(cameraTransform.position.x, cameraTransform.position.y, plane), Quaternion.identity);
+        var left = Instantiate(background, new Vector3(cameraTransform.position.x - tileWidth, cameraTransform.position.y, plane), Quaternion.identity);
+        var farLeft = Instantiate(background, new Vector3(cameraTransform.position.x - tileWidth * 2, cameraTransform.position.y, plane), Quaternion.identity);
+        var right = Instantiate(background, new Vector3(cameraTransform.position.x + tileWidth, cameraTransform.position.y, plane), Quaternion.identity);
+        var farRight = Instantiate(background, new Vector3(cameraTransform.position.x + tileWidth * 2, cameraTransform.position.y, plane), Quaternion.identity);
 
         return new List<ParallaxObject>
         {
