@@ -1,10 +1,10 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PotatoSwitch : MonoBehaviour
 {
-    public Spawn spawn;
     private bool lever = false;
     private Animator animator;
     private float resetTime;
@@ -34,7 +34,7 @@ public class PotatoSwitch : MonoBehaviour
             lever = true;
             animator.SetBool("Switch", true);
             resetTime = TimeKeeper.GetTime() + resetDelay;
-            spawn.SpawnPotatoes();
+            PotatoSwitchEvents.SwitchTriggered();
         }
     }
 }

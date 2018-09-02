@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,13 +18,12 @@ public class Spawn : MonoBehaviour {
     private int potatoesLeft;
     private float nextPotato;
     
-
-
 	// Use this for initialization
 	void Start ()
     {
         spawnTransform = GetComponent<Transform>();
         animator = GetComponent<Animator>();
+        PotatoSwitchEvents.RegisterListener(() => SpawnPotatoes());
 	}
 	
 	// Update is called once per frame
