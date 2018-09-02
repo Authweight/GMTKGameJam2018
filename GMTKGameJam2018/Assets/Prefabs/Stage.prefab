@@ -45,6 +45,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1159475397467480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4560875063603922}
+  m_Layer: 0
+  m_Name: BackgroundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1203662040963648
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,6 +696,19 @@ Transform:
   m_Father: {fileID: 4725359670922192}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4560875063603922
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1159475397467480}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4725359670922192}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4575694327464960
 Transform:
   m_ObjectHideFlags: 1
@@ -769,6 +797,7 @@ Transform:
   - {fileID: 224875680840153744}
   - {fileID: 4541540729286220}
   - {fileID: 4112388785822256}
+  - {fileID: 4560875063603922}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1514,12 +1543,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rooms:
-  - {fileID: 4408961293494786, guid: 160d660f2870ad545ac50d2aa90072c2, type: 2}
-  - {fileID: 4849202133081718, guid: 9b8f2f30cf8ce834295ccc3a6dba820c, type: 2}
-  - {fileID: 4475031337145396, guid: bb013c047a80b5e4084c466581eb06c3, type: 2}
+  - {fileID: 4549909245389978, guid: 160d660f2870ad545ac50d2aa90072c2, type: 2}
+  - {fileID: 4634162661124200, guid: be489a9594c33fb41a31cd8aed9a7960, type: 2}
+  - {fileID: 4379664409302276, guid: bb013c047a80b5e4084c466581eb06c3, type: 2}
   - {fileID: 4693041273576470, guid: 27aa22dca33e8e14db5e507d95a2a94a, type: 2}
-  - {fileID: 4017135612840352, guid: 71944f944df192b49a1f0d504ada95ff, type: 2}
-  camera: {fileID: 114282719033623382}
+  - {fileID: 4799648982471492, guid: 71944f944df192b49a1f0d504ada95ff, type: 2}
+  - {fileID: 4491919229198938, guid: fdac6b36982904d47b9012e7557c30cf, type: 2}
+  cameraController: {fileID: 114282719033623382}
+  chip: {fileID: 4585410694021132, guid: 1d69fa3e5cd8d824dad0dee7bb8b9569, type: 2}
 --- !u!114 &114467107884199822
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -122,7 +122,7 @@ public class Character : Interactive
         if (collision.gameObject.CompareTag("Bumper"))
         {
             var vector = (transform.position - collision.transform.position).normalized;
-            var launchVector = NearestVector(vector) * 30.0f;
+            var launchVector = NearestVector(vector) * 20.0f;
             SpringLaunch(launchVector.x, launchVector.y);
         }
     }

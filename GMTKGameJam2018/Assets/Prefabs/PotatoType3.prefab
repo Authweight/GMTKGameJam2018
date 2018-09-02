@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 50479048732122374}
   - component: {fileID: 212798565715675106}
   - component: {fileID: 70780579017668774}
+  - component: {fileID: 114054849919172220}
   m_Layer: 12
   m_Name: PotatoType3
   m_TagString: Bumper
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1255785240647146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.33, y: 1.66, z: -9.916876}
+  m_LocalPosition: {x: -2.33, y: 1.66, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,6 +78,17 @@ CapsuleCollider2D:
   m_Offset: {x: -0.007128656, y: 0.07013172}
   m_Size: {x: 0.70257866, y: 1.4035004}
   m_Direction: 0
+--- !u!114 &114054849919172220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255785240647146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb9b6f15f9e15144a8247960cace7bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212798565715675106
 SpriteRenderer:
   m_ObjectHideFlags: 1
