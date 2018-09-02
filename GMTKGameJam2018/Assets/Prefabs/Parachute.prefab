@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 50078586607699024}
   - component: {fileID: 212529651289706516}
   - component: {fileID: 114934681661930478}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Parachute
   m_TagString: Untagged
   m_Icon: {fileID: 0}

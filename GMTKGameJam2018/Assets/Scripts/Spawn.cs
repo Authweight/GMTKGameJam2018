@@ -11,6 +11,13 @@ public class Spawn : MonoBehaviour {
     private Animator animator;
     private bool gameOver = false;
 
+    public Rigidbody2D[] potatoes;
+
+    private float timeBetweenPotatoes = 1.5f;
+    private int potatoesLeft;
+    private float nextPotato;
+    
+
 
 	// Use this for initialization
 	void Start ()
@@ -31,19 +38,45 @@ public class Spawn : MonoBehaviour {
             if (parachute)
                 SpawnParachute();
         }
+
+        SpawnPotatoIfNeeded();
 	}
 
     private void SpawnParachute()
     {
         animator.SetTrigger("Spawn");
-        var newParachute = Instantiate(parachute, spawnTransform.position, spawnTransform.rotation);
+        var newParachute = Instantiate(parachute, GetSpawnPosition(), spawnTransform.rotation);
         newParachute.spawn = transform;
+    }
+
+    private Vector3 GetSpawnPosition()
+    {
+        return new Vector3(transform.position.x, transform.position.y, transform.position.z + 1);
+    }
+
+    public void SpawnPotatoes()
+    {
+        potatoesLeft = 3;
+        nextPotato = TimeKeeper.GetTime();
+    }
+
+    private void SpawnPotatoIfNeeded()
+    {
+        if (potatoesLeft > 0 && TimeKeeper.GetTime() > nextPotato)
+        {
+            animator.SetTrigger("Spawn");
+            var newPotato = Instantiate(potatoes[3-potatoesLeft], GetSpawnPosition(), spawnTransform.rotation);
+            newPotato.velocity = new Vector2(ConveyorSpeed.GetSpeed(), 0);
+            newPotato.angularVelocity = UnityEngine.Random.Range(40, 180);
+            potatoesLeft--;
+            nextPotato = TimeKeeper.GetTime() + timeBetweenPotatoes;                
+        }
     }
 
     private void SpawnSpring()
     {
         animator.SetTrigger("Spawn");
-        var newSpring = Instantiate(spring, spawnTransform.position, spawnTransform.rotation);
+        var newSpring = Instantiate(spring, GetSpawnPosition(), spawnTransform.rotation);
         newSpring.spawn = transform;
     }
 

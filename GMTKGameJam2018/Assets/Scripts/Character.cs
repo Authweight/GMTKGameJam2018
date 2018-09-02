@@ -1,4 +1,6 @@
-﻿using Assets.Scripts;
+﻿using System;
+using System.Linq;
+using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +14,8 @@ public class Character : Interactive
     public Text multiplier;
     private float multiplierEnd;
 
+    private Vector2[] bumperLaunchVectors;
+
     protected override bool MoveWithConveyor => IsGrounded;
 
     // Use this for initialization
@@ -22,6 +26,13 @@ public class Character : Interactive
         onLaunch = OnLaunch;
 
         onLand = OnLand;
+        bumperLaunchVectors = new Vector2[]
+        {
+            new Vector2(1, 1).normalized,
+            new Vector2(-1, 1).normalized,
+            new Vector2(-1, -1).normalized,
+            new Vector2(0, -1).normalized
+        };
 	}
 	
     public void OnLaunch()
@@ -41,7 +52,7 @@ public class Character : Interactive
     {
         state = CharacterState.Drifting;
         rb.constraints = RigidbodyConstraints2D.None;
-        rb.angularVelocity = -Random.Range(30, 300);
+        rb.angularVelocity = -UnityEngine.Random.Range(30, 300);
     }
 
     public void OnLand()
@@ -110,10 +121,16 @@ public class Character : Interactive
     {
         if (collision.gameObject.CompareTag("Bumper"))
         {
-            Debug.Log("Bumping");
-            var vector = (transform.position - collision.transform.position).normalized * 50;
-            SpringLaunch(vector.x + rb.velocity.x, vector.y + 15.0f);
+            var vector = (transform.position - collision.transform.position).normalized;
+            var launchVector = NearestVector(vector) * 30.0f;
+            SpringLaunch(launchVector.x, launchVector.y);
         }
+    }
+
+    private Vector2 NearestVector(Vector3 vector)
+    {
+        var actual = new Vector2(vector.x, vector.y);
+        return bumperLaunchVectors.OrderBy(x => Vector2.Angle(x, actual)).First();
     }
 
     private enum CharacterState

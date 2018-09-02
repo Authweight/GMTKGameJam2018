@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50674741865426248}
   - component: {fileID: 61743305671039514}
   - component: {fileID: 114792433207899910}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Parachute spring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
