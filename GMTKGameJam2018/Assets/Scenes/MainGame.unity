@@ -120,11 +120,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114363368091656086, guid: c652356d43f9e334ca66f212f9cfab8d,
-        type: 2}
-      propertyPath: rooms.Array.size
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 4725359670922192, guid: c652356d43f9e334ca66f212f9cfab8d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -159,21 +154,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114363368091656086, guid: c652356d43f9e334ca66f212f9cfab8d,
         type: 2}
-      propertyPath: enemy
+      propertyPath: rooms.Array.data[0]
       value: 
-      objectReference: {fileID: 4081843102156692, guid: 612b91f1201a0204882a2ceed5d49af2,
-        type: 2}
-    - target: {fileID: 114363368091656086, guid: c652356d43f9e334ca66f212f9cfab8d,
-        type: 2}
-      propertyPath: rooms.Array.data[3]
-      value: 
-      objectReference: {fileID: 4862812896154304, guid: 27aa22dca33e8e14db5e507d95a2a94a,
-        type: 2}
-    - target: {fileID: 114363368091656086, guid: c652356d43f9e334ca66f212f9cfab8d,
-        type: 2}
-      propertyPath: rooms.Array.data[6]
-      value: 
-      objectReference: {fileID: 4420771937836794, guid: 3bf1d2691fb42c94eaf93e3105a611b5,
+      objectReference: {fileID: 4215295631315448, guid: 160d660f2870ad545ac50d2aa90072c2,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c652356d43f9e334ca66f212f9cfab8d, type: 2}

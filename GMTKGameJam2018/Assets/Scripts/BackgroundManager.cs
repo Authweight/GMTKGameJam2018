@@ -105,7 +105,6 @@ public class BackgroundManager : MonoBehaviour
 
         public void Jump(float amount)
         {
-            Debug.Log("Jumping");
             start += amount;
             UpdatePosition();
         }

@@ -29,7 +29,7 @@ public class PotatoSwitch : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!lever && !collision.CompareTag("Hazard"))
+        if (!lever && collision.CompareTag("Character"))
         {
             lever = true;
             animator.SetBool("Switch", true);
