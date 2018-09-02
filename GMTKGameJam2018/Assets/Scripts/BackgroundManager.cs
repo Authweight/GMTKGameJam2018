@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BackgroundManager : MonoBehaviour
 {
@@ -16,16 +17,23 @@ public class BackgroundManager : MonoBehaviour
 
     private const float farParallax = .9f;
     private const float midParallax = .5f;
-    private float nearParallax = .9f;
+    private float nearParallax = .3f;
+    private float alignmentPoint;
 
-    private float tileWidth = 30;    
+    private float tileWidth = 30;
+
+    private float nextNearBackground;
+    private float nearBackgroundMin = 6.0f;
+    private float nearBackgroundMax = 14.0f;
 
 	// Use this for initialization
 	void Start ()
     {
+        alignmentPoint = cameraTransform.position.x;
         activeFarBackgrounds = Create(farBackground, farParallax, 50);
         activeMidBackgrounds = Create(midBackground, midParallax, 40);
         activeNearBackgrounds = new List<ParallaxObject>();
+        nextNearBackground = TimeKeeper.GetTime() + Random.Range(nearBackgroundMin, nearBackgroundMax);
     }
 
     // Update is called once per frame
@@ -34,6 +42,15 @@ public class BackgroundManager : MonoBehaviour
         UpdateAll();
         JumpBackgrounds(cameraTransform, activeFarBackgrounds);
         JumpBackgrounds(cameraTransform, activeMidBackgrounds);
+        if (TimeKeeper.GetTime() > nextNearBackground)
+        {
+            var toInstantiate = Random.Range(0, nearBackgrounds.Length);
+            var nearBackground = Instantiate(nearBackgrounds[toInstantiate], new Vector3(cameraTransform.position.x + 30, cameraTransform.position.y, 30), Quaternion.identity);
+            var parallax = new ParallaxObject(nearBackground.transform, cameraTransform, nearParallax, alignmentPoint);
+            activeNearBackgrounds.Add(parallax);
+            nextNearBackground = TimeKeeper.GetTime() + Random.Range(nearBackgroundMin, nearBackgroundMax);
+
+        }
 	}
 
     private void JumpBackgrounds(Transform cameraTransform, List<ParallaxObject> backgrounds)
@@ -71,11 +88,11 @@ public class BackgroundManager : MonoBehaviour
 
         return new List<ParallaxObject>
         {
-            new ParallaxObject(middle.transform, cameraTransform, parallax, cameraTransform.position.x),
-            new ParallaxObject(left.transform, cameraTransform, parallax, cameraTransform.position.x),
-            new ParallaxObject(farLeft.transform, cameraTransform, parallax, cameraTransform.position.x),
-            new ParallaxObject(right.transform, cameraTransform, parallax, cameraTransform.position.x),
-            new ParallaxObject(farRight.transform, cameraTransform, parallax, cameraTransform.position.x),
+            new ParallaxObject(middle.transform, cameraTransform, parallax, alignmentPoint),
+            new ParallaxObject(left.transform, cameraTransform, parallax, alignmentPoint),
+            new ParallaxObject(farLeft.transform, cameraTransform, parallax, alignmentPoint),
+            new ParallaxObject(right.transform, cameraTransform, parallax, alignmentPoint),
+            new ParallaxObject(farRight.transform, cameraTransform, parallax, alignmentPoint),
         };
     }
 
