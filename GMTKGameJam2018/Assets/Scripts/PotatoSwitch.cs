@@ -34,6 +34,7 @@ public class PotatoSwitch : MonoBehaviour
             lever = true;
             animator.SetBool("Switch", true);
             resetTime = TimeKeeper.GetTime() + resetDelay;
+            SoundEvents.Play("Switch");
             PotatoSwitchEvents.SwitchTriggered();
         }
     }
