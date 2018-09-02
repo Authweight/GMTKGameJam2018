@@ -30,6 +30,8 @@ namespace Assets.Scripts
                 rb.velocity = new Vector2(0, .5f);
             if (state == ParachuteState.FloatingAway)
                 rb.velocity = new Vector2(0, 3f);
+
+            transform.position = new Vector3(transform.position.x, Mathf.Min(transform.position.y, 30), transform.position.z);
         }
 
         public void CutLoose()

@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4969728619908140}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: PotatoSwitchParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 95390869989081740}
   - component: {fileID: 114826500119648116}
   - component: {fileID: 70701022249028156}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: PotatoSwitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}

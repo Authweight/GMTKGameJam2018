@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58632874378989414}
   - component: {fileID: 114827015334617684}
   - component: {fileID: 95248278733896716}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

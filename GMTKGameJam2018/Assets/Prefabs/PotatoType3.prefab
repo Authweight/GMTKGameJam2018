@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 50479048732122374}
   - component: {fileID: 212798565715675106}
   - component: {fileID: 70780579017668774}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PotatoType3
   m_TagString: Bumper
   m_Icon: {fileID: 0}
