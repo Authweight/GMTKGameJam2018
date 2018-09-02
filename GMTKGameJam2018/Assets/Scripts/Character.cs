@@ -125,6 +125,11 @@ public class Character : Interactive
             var launchVector = NearestVector(vector) * 20.0f;
             SpringLaunch(launchVector.x, launchVector.y);
         }
+
+        if (collision.gameObject.CompareTag("Hazard"))
+        {
+            stageManager.Death();
+        }
     }
 
     private Vector2 NearestVector(Vector3 vector)

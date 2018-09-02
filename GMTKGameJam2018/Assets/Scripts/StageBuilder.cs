@@ -11,15 +11,21 @@ public class StageBuilder : MonoBehaviour
     public CameraController cameraController;
     private float offSet;
     public Transform chip;
+    public Transform enemy;
 
     private static int width = 15;
     private static int height = 20;
+    private float enemyMin = 10.0f;
+    private float enemyMax = 40.0f;
+    private float nextEnemy;
+        
 
 	// Use this for initialization
 	void Start ()
     {
         nextRoom = transform.position.x;
         offSet = transform.position.x - cameraController.transform.position.x;
+        nextEnemy = TimeKeeper.GetTime() + Random.Range(enemyMin, enemyMax);
 	}
 	
 	// Update is called once per frame
@@ -30,6 +36,12 @@ public class StageBuilder : MonoBehaviour
         {
             nextRoom = transform.position.x + 30;
             SpawnSetPiece();
+        }
+
+        if (TimeKeeper.GetTime() > nextEnemy)
+        {
+            Instantiate(enemy, new Vector3(transform.position.x, transform.position.y - 10, 0), Quaternion.identity);
+            nextEnemy = TimeKeeper.GetTime() + Random.Range(enemyMin, enemyMax);
         }
 	}
 

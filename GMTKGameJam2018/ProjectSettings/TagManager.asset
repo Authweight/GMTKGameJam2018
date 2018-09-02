@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Hazard
   - Bumper
+  - Spring
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Items
   - Environment
   - Destroyer
-  - 
+  - Enemy
   - 
   - 
   - 
