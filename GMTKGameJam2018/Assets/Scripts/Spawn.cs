@@ -31,16 +31,57 @@ public class Spawn : MonoBehaviour {
     {
         if(!gameOver)
         {
-            var spring = Input.GetButtonDown("Fire1");
+            var spring = GetSpringInput();
+            
             if (spring)
                 SpawnSpring();
-            var parachute = Input.GetButtonDown("Fire2");
+
+            var parachute = GetParachuteInput(); 
             if (parachute)
                 SpawnParachute();
         }
 
         SpawnPotatoIfNeeded();
 	}
+
+    private bool GetParachuteInput()
+    {
+#if UNITY_STANDALONE || UNITY_WEBGL
+        return Input.GetButtonDown("Fire2");
+#endif
+#if UNITY_ANDROID
+        return MobileParachute();
+#endif
+    }
+
+    private bool GetSpringInput()
+    {
+#if UNITY_STANDALONE || UNITY_WEBGL
+        return Input.GetButtonDown("Fire1");
+#endif
+#if UNITY_ANDROID
+        return MobileSpring();
+#endif
+    }
+
+    private bool MobileParachute()
+    {
+        return TouchInPosition(x => x > (Screen.width / 2));
+    }
+
+    private bool MobileSpring()
+    {
+        return TouchInPosition(x => x <= (Screen.width / 2));
+    }
+
+    private bool TouchInPosition(Func<float, bool> comparer)
+    {
+        if (Input.touchCount == 0)
+            return false;
+
+        var touch = Input.touches[0];
+        return touch.phase == TouchPhase.Ended && comparer(touch.position.x);
+    }
 
     private void SpawnParachute()
     {

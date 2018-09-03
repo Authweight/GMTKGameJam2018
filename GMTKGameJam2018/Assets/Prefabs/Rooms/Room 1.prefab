@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58371614578363650}
   - component: {fileID: 114643502405856544}
   - component: {fileID: 95281552395514298}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 58300310645775906}
   - component: {fileID: 114685597691311606}
   - component: {fileID: 95073981696776828}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4249080605728972}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ChipPyramid (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 58356555302187424}
   - component: {fileID: 114207532571622964}
   - component: {fileID: 95406225810860282}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 58869050114129754}
   - component: {fileID: 114917200712237650}
   - component: {fileID: 95126189872193208}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 58406393575019798}
   - component: {fileID: 114187426348688284}
   - component: {fileID: 95262819788665378}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 58341281658931556}
   - component: {fileID: 114635577433387320}
   - component: {fileID: 95432562086702530}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 58254582105661338}
   - component: {fileID: 114702138995180422}
   - component: {fileID: 95013887357895324}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 58578701567472952}
   - component: {fileID: 114271431281770992}
   - component: {fileID: 95661289019060068}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 58996419703733206}
   - component: {fileID: 114052769364213290}
   - component: {fileID: 95344596735623272}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 58665903961044212}
   - component: {fileID: 114381839866375074}
   - component: {fileID: 95363699971937936}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 58635950085757354}
   - component: {fileID: 114741973369965508}
   - component: {fileID: 95312987647581276}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 58642719893880442}
   - component: {fileID: 114681354871267832}
   - component: {fileID: 95115474186471102}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 58716288261892838}
   - component: {fileID: 114831054033551000}
   - component: {fileID: 95436436583670408}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 58773759930213124}
   - component: {fileID: 114677540389967240}
   - component: {fileID: 95221277356189742}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 58620814992687040}
   - component: {fileID: 114723256969155750}
   - component: {fileID: 95263440649598904}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 58035965641433762}
   - component: {fileID: 114235523103959490}
   - component: {fileID: 95702149117824696}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4533350091199744}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ChipPyramid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 58911554037121264}
   - component: {fileID: 114617908040140336}
   - component: {fileID: 95530848743650190}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 58157314673098482}
   - component: {fileID: 114550811891566020}
   - component: {fileID: 95358463834161782}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 58535639407719518}
   - component: {fileID: 114298618619535414}
   - component: {fileID: 95382505176479264}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 58781251452655158}
   - component: {fileID: 114537783262608732}
   - component: {fileID: 95443026029059498}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 58483379424391296}
   - component: {fileID: 114387084664993632}
   - component: {fileID: 95973388663258718}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 58932030142621080}
   - component: {fileID: 114826388064312436}
   - component: {fileID: 95075085940994080}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 58627279522820830}
   - component: {fileID: 114277551580780618}
   - component: {fileID: 95605735523872602}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 58432265961143332}
   - component: {fileID: 114981969533550220}
   - component: {fileID: 95850207119382810}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 58550603534506292}
   - component: {fileID: 114625510170637488}
   - component: {fileID: 95198133395753792}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +612,7 @@ GameObject:
   - component: {fileID: 58448059346510444}
   - component: {fileID: 114617407535108428}
   - component: {fileID: 95329851138330450}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 58305316919845638}
   - component: {fileID: 114181089611520636}
   - component: {fileID: 95115531399579962}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 58556300849170240}
   - component: {fileID: 114177459816066050}
   - component: {fileID: 95490984348901968}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +672,7 @@ GameObject:
   - component: {fileID: 58678730439782790}
   - component: {fileID: 114208076915352798}
   - component: {fileID: 95317718323878572}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 58984812501264028}
   - component: {fileID: 114078551224828094}
   - component: {fileID: 95433812769003690}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +712,7 @@ GameObject:
   - component: {fileID: 58873779808464998}
   - component: {fileID: 114047501347903322}
   - component: {fileID: 95763854918110254}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 58080021667304490}
   - component: {fileID: 114840107425572260}
   - component: {fileID: 95261861891456008}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -752,7 +752,7 @@ GameObject:
   - component: {fileID: 58749257283586726}
   - component: {fileID: 114014549363090730}
   - component: {fileID: 95321069308826716}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,7 +772,7 @@ GameObject:
   - component: {fileID: 58898950130997804}
   - component: {fileID: 114678033422150638}
   - component: {fileID: 95904785173061214}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 58981463371668276}
   - component: {fileID: 114085989660066756}
   - component: {fileID: 95880220322610694}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 58950004504173142}
   - component: {fileID: 114695241306506768}
   - component: {fileID: 95821846617973514}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 58710043702277148}
   - component: {fileID: 114726795596080732}
   - component: {fileID: 95323380552757938}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -852,7 +852,7 @@ GameObject:
   - component: {fileID: 58785774133960482}
   - component: {fileID: 114821728932200888}
   - component: {fileID: 95729412611927474}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 58115360595921940}
   - component: {fileID: 114903465995209644}
   - component: {fileID: 95776621616846514}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ GameObject:
   - component: {fileID: 58655290921820154}
   - component: {fileID: 114385940723351722}
   - component: {fileID: 95406357994953878}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 58157961035106620}
   - component: {fileID: 114559734129533252}
   - component: {fileID: 95942675632658552}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -932,7 +932,7 @@ GameObject:
   - component: {fileID: 58911534240840294}
   - component: {fileID: 114520451437151350}
   - component: {fileID: 95735044975826710}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -952,7 +952,7 @@ GameObject:
   - component: {fileID: 58429516578420176}
   - component: {fileID: 114658161952865888}
   - component: {fileID: 95921702274795394}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,7 +972,7 @@ GameObject:
   - component: {fileID: 58617129724386870}
   - component: {fileID: 114898412110029368}
   - component: {fileID: 95525076265050172}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 58229972331555930}
   - component: {fileID: 114372479211706850}
   - component: {fileID: 95327527092023074}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1012,7 +1012,7 @@ GameObject:
   - component: {fileID: 58264115496589760}
   - component: {fileID: 114715354688008960}
   - component: {fileID: 95559227330649774}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1032,7 +1032,7 @@ GameObject:
   - component: {fileID: 58054466409217096}
   - component: {fileID: 114484621154884188}
   - component: {fileID: 95006584998959472}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1052,7 +1052,7 @@ GameObject:
   - component: {fileID: 58611288753237650}
   - component: {fileID: 114516050335903556}
   - component: {fileID: 95877519863081710}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1067,7 +1067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4634162661124200}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Room 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1082,7 +1082,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4767368340574314}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: PotatoSwitchHazard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 58820243395027240}
   - component: {fileID: 114260353430547592}
   - component: {fileID: 95421695953282490}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1122,7 +1122,7 @@ GameObject:
   - component: {fileID: 58740954146328736}
   - component: {fileID: 114225470579826534}
   - component: {fileID: 95579808048877698}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1142,7 +1142,7 @@ GameObject:
   - component: {fileID: 58325911766477694}
   - component: {fileID: 114506864696118466}
   - component: {fileID: 95669737833833970}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1162,7 +1162,7 @@ GameObject:
   - component: {fileID: 58237887490669090}
   - component: {fileID: 114116106842819574}
   - component: {fileID: 95077404213556090}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 58583932224030772}
   - component: {fileID: 114637215952482644}
   - component: {fileID: 95404967439765902}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1202,7 +1202,7 @@ GameObject:
   - component: {fileID: 58674139909192480}
   - component: {fileID: 114206526170432610}
   - component: {fileID: 95169006068914574}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1222,7 +1222,7 @@ GameObject:
   - component: {fileID: 58944432007061738}
   - component: {fileID: 114758264093372138}
   - component: {fileID: 95486384214187294}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1242,7 +1242,7 @@ GameObject:
   - component: {fileID: 58217489940641472}
   - component: {fileID: 114635088912246532}
   - component: {fileID: 95220849995066134}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1277,7 +1277,7 @@ GameObject:
   - component: {fileID: 58271589623980178}
   - component: {fileID: 114567844578247200}
   - component: {fileID: 95372694134271918}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1297,7 +1297,7 @@ GameObject:
   - component: {fileID: 58920169673604042}
   - component: {fileID: 114270711979975302}
   - component: {fileID: 95719413402418898}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1317,7 +1317,7 @@ GameObject:
   - component: {fileID: 58077741081880974}
   - component: {fileID: 114190789483163606}
   - component: {fileID: 95806341059949882}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1337,7 +1337,7 @@ GameObject:
   - component: {fileID: 58225637423441580}
   - component: {fileID: 114896545450954500}
   - component: {fileID: 95524110304187632}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1357,7 +1357,7 @@ GameObject:
   - component: {fileID: 58334531158094670}
   - component: {fileID: 114111295362086746}
   - component: {fileID: 95582139939056488}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1377,7 +1377,7 @@ GameObject:
   - component: {fileID: 58162004937130730}
   - component: {fileID: 114001354915188744}
   - component: {fileID: 95755294879034710}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1397,7 +1397,7 @@ GameObject:
   - component: {fileID: 58477057305391508}
   - component: {fileID: 114632081481512242}
   - component: {fileID: 95531394181201356}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1417,7 +1417,7 @@ GameObject:
   - component: {fileID: 58144384433527076}
   - component: {fileID: 114162043711765712}
   - component: {fileID: 95886088976773388}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collectible10 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2120,7 +2120,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1704000755193860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.45774, y: 2.1588614, z: 0}
+  m_LocalPosition: {x: 252.97787, y: 24.9379, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4249080605728972}

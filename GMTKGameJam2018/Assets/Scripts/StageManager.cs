@@ -34,6 +34,11 @@ public class StageManager : MonoBehaviour
         {
             SceneManager.LoadScene(scene.name);
         }
+
+        if (gameOver && Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended)
+        {
+            SceneManager.LoadScene(scene.name);
+        }
 	}
 
     private void FixedUpdate()
