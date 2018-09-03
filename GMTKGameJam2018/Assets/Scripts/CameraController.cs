@@ -14,8 +14,8 @@ public class CameraController : MonoBehaviour
         offset = transform.position.x - character.position.x;
 	}
 
-    public void Update()
+    public void FixedUpdate()
     {
-        transform.position = new Vector3(Mathf.Max(character.position.x + offset), transform.position.y, transform.position.z);
+        transform.Translate(new Vector3(Mathf.Max(character.position.x + offset), transform.position.y, transform.position.z) - transform.position);
     }
 }

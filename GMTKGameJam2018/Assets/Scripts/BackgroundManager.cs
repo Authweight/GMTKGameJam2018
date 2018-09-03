@@ -15,7 +15,12 @@ public class BackgroundManager : MonoBehaviour
     private List<ParallaxObject> activeMidBackgrounds;
     private List<ParallaxObject> activeNearBackgrounds;
 
+#if UNITY_ANDROID
+    private const float farParallax = 0.7f;
+#else
     private const float farParallax = .9f;
+#endif
+
     private const float midParallax = .5f;
     private float nearParallax = .3f;
     private float alignmentPoint;
@@ -106,7 +111,7 @@ public class BackgroundManager : MonoBehaviour
 
         public void UpdatePosition()
         {
-            transform.position = new Vector3(start + (cameraTransform.position.x - alignmentPoint) * parallax, transform.position.y, transform.position.z);
+            transform.Translate(new Vector3(start + (cameraTransform.position.x - alignmentPoint) * parallax, transform.position.y, transform.position.z) - transform.position);
         }
 
         public ParallaxObject(Transform transform, Transform camera, float parallax, float alignmentPoint)

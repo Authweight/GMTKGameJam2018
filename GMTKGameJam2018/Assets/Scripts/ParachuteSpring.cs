@@ -44,8 +44,7 @@ public class ParachuteSpring : Interactive
             if (shouldDeploy)
             {
                 rb.velocity = Vector2.zero;
-                myParachute = Instantiate(parachutePrefab, transform.position, Quaternion.identity);
-                myParachute.transform.position = transform.position + Vector3.up * 1f;
+                myParachute = Instantiate(parachutePrefab, transform.position + Vector3.up, Quaternion.identity);
                 joint = gameObject.AddComponent<HingeJoint2D>();
                 joint.connectedBody = myParachute.GetComponent<Rigidbody2D>();
                 joint.anchor = new Vector2(0, .59f);
